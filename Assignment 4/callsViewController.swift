@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  callsViewController.swift
 //  Assignment 4
 //
 //  Created by Chris Hardwick on 4/18/16.
@@ -8,27 +8,27 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    @IBOutlet weak var thanksPhoto: UIImageView!
-    @IBOutlet weak var mannersLabel: UILabel!
+class callsViewController: UIViewController {
     
-    var thankyou : String = "Always remember to thank those who help you."
+    @IBOutlet weak var pleasePicture: UIImageView!
+    
+    @IBOutlet weak var pleaseLabel: UILabel!
+    
+    var phone : String = "Politely introduce yourself on the phone before asking to speak with someone."
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.thanksPhoto.image = UIImage(named: "thankyou")
-        mannersLabel.text = thankyou
+        self.pleasePicture.image = UIImage(named: "calls")
+        pleaseLabel.text = phone
         
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
-
