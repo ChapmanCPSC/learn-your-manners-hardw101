@@ -15,6 +15,7 @@
 		6EC663D61CC5509800FDFF83 /* Assignment_4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC663D51CC5509800FDFF83 /* Assignment_4Tests.swift */; };
 		6EC663FE1CC5AFB700FDFF83 /* mannersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC663FD1CC5AFB700FDFF83 /* mannersTableViewController.swift */; };
 		6ECBC7D71CD19F9E00920A69 /* emailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECBC7D61CD19F9E00920A69 /* emailViewController.swift */; };
+		6ECBC7D91CD1B5DC00920A69 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ECBC7D81CD1B5DC00920A69 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		6EC663D51CC5509800FDFF83 /* Assignment_4Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment_4Tests.swift; sourceTree = "<group>"; };
 		6EC663FD1CC5AFB700FDFF83 /* mannersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mannersTableViewController.swift; sourceTree = "<group>"; };
 		6ECBC7D61CD19F9E00920A69 /* emailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = emailViewController.swift; sourceTree = "<group>"; };
+		6ECBC7D81CD1B5DC00920A69 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6ECBC7D91CD1B5DC00920A69 /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +66,7 @@
 		6EC663B11CC5509800FDFF83 = {
 			isa = PBXGroup;
 			children = (
+				6ECBC7D81CD1B5DC00920A69 /* MessageUI.framework */,
 				6EC663BC1CC5509800FDFF83 /* Assignment 4 */,
 				6EC663D21CC5509800FDFF83 /* Assignment 4Tests */,
 				6EC663BB1CC5509800FDFF83 /* Products */,

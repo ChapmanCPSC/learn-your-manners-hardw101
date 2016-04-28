@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import MessageUI
 
 var mannersArray = [String]()
+
+var emailArray = [String]()
 
 var toPass: Int = 0
 
@@ -19,16 +22,57 @@ class mannersTableView: UIViewController, UITableViewDelegate, UITableViewDataSo
    
     var email = "thiswillchange@change.org"
     
-    
     @IBOutlet weak var mannersTableView: UITableView!
     
     @IBAction func sendEmailButton(sender: AnyObject) {
         print(email)
+        
+        for num in toPassArray{
+            
+            if num == 0 {
+                emailArray.append("Thanks")
+            }
+            
+            if num == 1 {
+                emailArray.append("Please")
+            }
+           
+            if num == 2 {
+                emailArray.append("The Golden Rule")
+            }
+            
+            if num == 3 {
+                emailArray.append("Coughing")
+            }
+            
+            if num == 4 {
+                emailArray.append("Phone Calls")
+            }
+            
+            if num == 5 {
+                emailArray.append("Saying Sorry")
+            }
+            
+            if num == 6 {
+                emailArray.append("Chewing Food")
+            }
+            
+            if num == 7 {
+                emailArray.append("Excuse Me")
+            }
+        }
+        
+        let mailComposedViewController = configuredMailComposer()
+        
+        self.presentViewController(mailComposedViewController, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let backButton = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: navigationController, action: nil)
+        
+        navigationItem.leftBarButtonItem = backButton
         mannersArray = ["Thank you", "Please", "The Golden Rule", "Coughing", "Phone Calls", "Sorry", "Chewing",  "Excuse me"]
         
         // Do any additional setup after loading the view, typically from a nib.
@@ -73,8 +117,19 @@ class mannersTableView: UIViewController, UITableViewDelegate, UITableViewDataSo
             var svc = segue.destinationViewController as! ViewController
             svc.pleasWork = indexPath.row
         }
+    }
+    
+    
+    func configuredMailComposer() -> MFMailComposeViewController {
         
+        let mailComposerVC = MFMailComposeViewController()
         
+        mailComposerVC.setToRecipients([email])
+        mailComposerVC.setSubject("Manners Review")
+        mailComposerVC.setMessageBody("Your child learned about these manners: \(emailArray)", isHTML: false)
+        
+        return mailComposerVC
     }
 }
+
     

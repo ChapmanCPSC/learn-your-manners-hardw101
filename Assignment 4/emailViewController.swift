@@ -25,16 +25,16 @@ class emailViewController : ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let backButton = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: navigationController, action: nil)
+        
+        navigationItem.leftBarButtonItem = backButton
+        
         print(defaultEmail.objectForKey("email"))
         
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
-        let backButton = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: navigationController, action: nil)
-        
-        navigationItem.leftBarButtonItem = backButton
         
         // Dispose of any resources that can be recreated.
     }
